@@ -10,6 +10,7 @@ Everything else will be installed and loaded during the build phase.
 ## Execution
 You can either execute the batch script or issue the commands included manually. The batch script updates polynote and starts the container. If you don't want to update Polynote you can simply type ```docker-compose up``` in the directory of ```docker-compose.yml```
 To stop the container just press ctrl+c in the command line.
+Note: For the first time executing you must use the batch script or type ```docker-compose build``` followed by ```docker-compose up```.
 
 ## Usage
 After starting the container you can access Polynote on [http://localhost:8192](http://localhost:8192)
