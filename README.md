@@ -1,4 +1,4 @@
-# Polynote Windows Inofficial (current versions 0.3+)
+# Polynote Windows Inofficial (current versions 0.3.11+)
 [Official Polynote Repository](https://github.com/polynote/polynote)
 
 The script provided allows to run the latest Polynote Versions on Windows. It is currently tested on version ```0.3.11 (August 19, 2020)```.
