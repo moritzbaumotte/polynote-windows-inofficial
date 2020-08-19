@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+set -x
+cd "${0%/*}" || exit
+jep_path=$(pip3 show jep | grep "^Location:" | cut -d ':' -f 2 | cut -d ' ' -f 2)
+python_lib_path=$(dirname "${jep_path}")
+python_path=$(dirname "${python_lib_path}")
+if test -e "${python_path}/libpython3.so"
+then
+  export LD_PRELOAD="${python_path}/libpython3.so"
+else
+  echo "Unable to locate libpython3.so (python support probably won't work)"
+fi
+
+if test -e plugins.d
+then
+  deps=($(ls deps/*.jar plugins.d/*.jar))
+else
+  deps=($(ls deps/*.jar))
+fi
+
+cp=$(IFS=: ; echo "${deps[*]}")
+exec java -cp "polynote.jar:${cp}" "-Djava.library.path=${jep_path}/jep:${JAVA_LIBRARY_PATH} ${JAVA_OPTS}" polynote.Main "$@"
+exit

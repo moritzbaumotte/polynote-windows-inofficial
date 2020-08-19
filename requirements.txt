@@ -1,0 +1,14 @@
+cycler
+jedi
+jep
+kiwisolver
+matplotlib
+numpy
+parso
+Pillow
+py4j
+pyparsing
+pyspark
+python-dateutil
+six
+virtualenv
