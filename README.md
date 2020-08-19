@@ -1,7 +1,7 @@
 # Polynote Windows Inofficial (current versions 0.3+)
 [Official Polynote Repository](https://github.com/polynote/polynote)
 
-The script provided allows to run the latest Polynote Versions on Windows. It is currently tested on version 0.3.11 (August 19, 2020).
+The script provided allows to run the latest Polynote Versions on Windows. It is currently tested on version ```0.3.11 (August 19, 2020)```.
 
 ## Prerequisits
 In order to run the batch script you need to have docker and docker-compose installed. docker-compose is included in [Docker Desktop](https://docs.docker.com/docker-for-windows/install/).
