@@ -1,0 +1,8 @@
+version: '2.0'
+services:
+    polynote:
+        build: .
+        ports:
+        - "8192:8192"
+        volumes:
+        - ./notebooks:/usr/src/app/polynote/notebooks
