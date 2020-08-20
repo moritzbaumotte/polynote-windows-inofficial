@@ -1,7 +1,7 @@
 # Polynote Windows Inofficial (current versions 0.3.11+)
 [Official Polynote Repository](https://github.com/polynote/polynote)
 
-The script provided allows to run the latest Polynote Versions on Windows. It is currently tested on version ```0.3.11 (August 19, 2020)```.
+The script provided allows to run the latest Polynote versions on Windows. It is currently tested on version ```0.3.11 (August 19, 2020)```. If you run the batch script or execute ```docker-compose build``` the latest Polynote version is downloaded to create the docker image.
 
 ## Prerequisits
 In order to run the batch script you need to have docker and docker-compose installed. docker-compose is included in [Docker Desktop](https://docs.docker.com/docker-for-windows/install/).
@@ -10,7 +10,7 @@ Everything else will be installed and loaded during the build phase.
 ## Execution
 You can either execute the batch script or issue the commands included manually. The batch script updates polynote and starts the container. If you don't want to update Polynote you can simply type ```docker-compose up``` in the directory of ```docker-compose.yml```
 To stop the container just press ctrl+c in the command line.
-Note: For the first time executing you must use the batch script or type ```docker-compose build``` followed by ```docker-compose up```.
+Note: For the first time executing you must use the batch script or type ```docker-compose build``` followed by ```docker-compose up```. You have to do the same whenever you want to update Polynote as in the image creation process the newest version of Polynote is downloaded.
 
 ## Usage
 After starting the container you can access Polynote on [http://localhost:8192](http://localhost:8192)
