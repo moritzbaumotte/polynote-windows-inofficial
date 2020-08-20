@@ -29,6 +29,8 @@ RUN set -e; \
     libxslt-dev \
     zlib-dev \
     jpeg-dev \
+	grep \
+	curl \
   ;
 
 # Install Python and dependencies
@@ -38,13 +40,9 @@ RUN apk add python3-dev \
   && pip3 install --upgrade pip \
   && pip3 install --upgrade cython \
   && pip3 install -r requirements.txt
-
-# Get latest polynote version
-
   
 # Download and extract polynote
-ARG POLYNOTE_VERSION=0.3.11
-RUN curl -L https://github.com/polynote/polynote/releases/download/${POLYNOTE_VERSION}/polynote-dist.tar.gz \
+RUN curl -L --insecure https://github.com/polynote/polynote/releases/download/`curl --insecure "https://github.com/polynote/polynote/releases/latest" | grep -Po [0-9]+\.[0-9]+\.[0-9]+`/polynote-dist.tar.gz \
   | tar -xzvpf -
 
 COPY config.yml ./polynote/config.yml

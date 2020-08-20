@@ -12,3 +12,5 @@ pyspark
 python-dateutil
 six
 virtualenv
+
+# Additional libraries
